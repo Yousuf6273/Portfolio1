@@ -475,6 +475,50 @@ h2{font-family:var(--serif);font-size:clamp(32px,4.5vw,56px);font-weight:400;let
         </div>
       </div>
 
+      <!-- PROJECT: CAPSULE iOS APP -->
+      <div class="proj-item fu d2" onclick="toggleExpand(this)">
+        <div class="proj-meta">
+          <div class="proj-cat">iOS / Software</div>
+          <div class="proj-year">2025 — In Progress</div>
+          <div class="proj-tags">
+            <span class="proj-tag hi">SwiftUI</span>
+            <span class="proj-tag hi">Firebase</span>
+            <span class="proj-tag">iOS 17+</span>
+            <span class="proj-tag">Cloud Functions</span>
+            <span class="proj-tag">Firestore</span>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-name">Capsule —<br>Locked Trip-Memory Vault</div>
+          <p class="proj-desc">An iOS app where friends seal photos and videos into an encrypted vault throughout a trip — nobody, including the uploader, can view anything until the unlock condition is met. Then everyone experiences the Trip Replay together.</p>
+          <div style="display:flex;align-items:center;gap:0">
+            <a href="https://github.com/Yousuf6273/Capsule" target="_blank" class="proj-link" onclick="event.stopPropagation()">
+              View on GitHub
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+            <button class="expand-btn" onclick="event.stopPropagation();toggleExpand(this.closest('.proj-item'))">+ Details</button>
+          </div>
+          <div class="proj-expand">
+            <div class="proj-detail">
+              <ul class="proj-bullets">
+                <li>Designed and built a full iOS app in SwiftUI with a custom design system — three-font system, glass components, per-trip dynamic colour extraction using CIKMeans, and a deep charcoal / rich purple / champagne gold visual language.</li>
+                <li>Implemented server-enforced locking: Firestore and Firebase Storage rules deny all reads of sealed media for everyone (including the uploader) until a Cloud Function — the sole writer of vault state — flips the vault to unlocked.</li>
+                <li>Built a resilient offline-first upload queue (disk-persisted, NWPathMonitor drain) so contributions are sealed locally and synced when connectivity returns — no data loss on poor connections.</li>
+                <li>Engineered a full Trip Replay ceremony: tap-to-unseal vault dial with golden bloom animation → intro card → Trip by the Numbers (dynamically-scored stat slides with eased count-ups) → Journey (chapter cards, Ken Burns photos, looping muted video) → Finale → permanent gallery.</li>
+                <li>Added Quiz mode (prediction, guess-who-took, which-day), a Wrapped summary screen with an <code>ImageRenderer</code>-based shareable card, and a day-grouped permanent album with memory detail view.</li>
+                <li>Architecture: protocol-based services (<code>AuthServicing</code>, <code>VaultServicing</code>) with mock implementations backing all flows now; Firebase implementations slot in behind the same interfaces for go-live.</li>
+              </ul>
+              <div class="proj-spec-row">
+                <div class="proj-spec-cell"><div class="k">Platform</div><div class="v">iOS 17+</div></div>
+                <div class="proj-spec-cell"><div class="k">Backend</div><div class="v">Firebase</div></div>
+                <div class="proj-spec-cell"><div class="k">Language</div><div class="v">Swift / SwiftUI</div></div>
+                <div class="proj-spec-cell"><div class="k">Status</div><div class="v blue">In Progress</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- PROJECT 2: ROBOT ARM -->
       <div class="proj-item fu d2" onclick="toggleExpand(this)">
         <div class="proj-meta">
