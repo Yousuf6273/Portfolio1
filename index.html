@@ -236,6 +236,14 @@ h2{font-family:var(--serif);font-size:clamp(32px,4.5vw,56px);font-weight:400;let
   .form-row{grid-template-columns:1fr}
   .stats-bar{flex-direction:column}
   .stat{border-right:none;border-bottom:1px solid var(--rule)}
+  .proj-spec-cell{padding:10px 8px}
+  .ct-head{display:none}
+  .course-table,.course-table tbody,.ct-row{display:block;width:100%}
+  .ct-row td{display:block;padding:3px 16px;border-bottom:none}
+  .ct-row td:first-child{padding-top:14px}
+  .ct-row td.ct-inst,.ct-row td.ct-yr{display:inline-block}
+  .ct-row td:last-child{padding-bottom:14px;border-bottom:1px solid var(--rule2)}
+  .ct-row:last-child td:last-child{border-bottom:none}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 </style>
@@ -1148,7 +1156,6 @@ h2{font-family:var(--serif);font-size:clamp(32px,4.5vw,56px);font-weight:400;let
           <div class="spec-row"><div class="spec-key">Graduation</div><div class="spec-val">June 2027</div></div>
           <div class="spec-row"><div class="spec-key">Location</div><div class="spec-val">Dubai, UAE</div></div>
           <div class="spec-row"><div class="spec-key">A-Levels</div><div class="spec-val multi"><span>Mathematics</span><span>Physics</span><span>Economics</span></div></div>
-          <div class="spec-row"><div class="spec-key">Primary CAD</div><div class="spec-val blue">OnShape</div></div>
           <div class="spec-row"><div class="spec-key">Languages</div><div class="spec-val multi"><span>English · Urdu · Arabic</span><span>German (learning)</span></div></div>
           <div class="spec-row"><div class="spec-key">Focus</div><div class="spec-val">Technology · Engineering · Finance</div></div>
           <div class="spec-row"><div class="spec-key">Goal</div><div class="spec-val blue">Building at the intersection of tech, engineering &amp; finance</div></div>
@@ -1195,7 +1202,6 @@ h2{font-family:var(--serif);font-size:clamp(32px,4.5vw,56px);font-weight:400;let
       </a>
       <a href="https://github.com/Yousuf6273" target="_blank" class="c-btn">GitHub</a>
       <a href="https://www.linkedin.com/in/s-y-a-satirev747" target="_blank" class="c-btn">LinkedIn</a>
-      <a href="https://cad.onshape.com/documents/67b761a7b7c560e3dac07a54/w/b548c8212c0b7fa142191e3b/e/328ee64a8d7d9f7e399eca0a" target="_blank" class="c-btn">OnShape</a>
     </div>
     <div class="foot">Syed Yousuf Ahmed · Portfolio · 2026 · Hosted on GitHub Pages</div>
   </div>
@@ -1321,7 +1327,7 @@ let a1=0,a2=0,a3=0;
   const dpr=window.devicePixelRatio||1;
   const LW=560,LH=320;
   canvas.width=LW*dpr; canvas.height=LH*dpr;
-  canvas.style.width=LW+'px'; canvas.style.height=LH+'px';
+  canvas.style.width='100%'; canvas.style.maxWidth=LW+'px'; canvas.style.height='auto';
   ctx.scale(dpr,dpr);
   // Geometry
   const CX=LW/2, CY=268;   // crankshaft centre
